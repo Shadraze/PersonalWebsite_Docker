@@ -8,19 +8,19 @@ services:
     ports:
       - 80:80    
       - 443:443
-    volumes:
-      - ./Volumes/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./Volumes/certbot/www/:/var/www/certbot/:ro
-      - ./Volumes/certbot/conf/:/etc/ssl/certs/conf/:ro
+    _Volumes:
+      - ./_Volumes/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./_Volumes/certbot/www/:/var/www/certbot/:ro
+      - ./_Volumes/certbot/conf/:/etc/ssl/certs/conf/:ro
 
   certbot:
     container_name: certbot
     image: certbot/certbot:latest
     networks:
       - webserver
-    volumes:
-      - ./Volumes/certbot/www/:/var/www/certbot/:rw
-      - ./Volumes/certbot/conf/:/etc/letsencrypt/:rw
+    _Volumes:
+      - ./_Volumes/certbot/www/:/var/www/certbot/:rw
+      - ./_Volumes/certbot/conf/:/etc/letsencrypt/:rw
 
   mysql:
     container_name: mysql
@@ -34,8 +34,8 @@ services:
     expose:
       - 3306
       - 33060
-    volumes:
-      - ./Volumes/mysql:/var/lib/mysql
+    _Volumes:
+      - ./_Volumes/mysql:/var/lib/mysql
     secrets:
       - db_password
       - db_root_password
@@ -55,8 +55,8 @@ services:
       - mysql
     expose:
       - 80
-    volumes:
-      - ./Volumes/wordpress:/var/www/html          
+    _Volumes:
+      - ./_Volumes/wordpress:/var/www/html          
     secrets:
       - db_password
     environment:
