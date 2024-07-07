@@ -18,8 +18,8 @@ It is crucial to do a dry run the first time as LetsEncrypt provides a limited n
 Remove the --dry-run flag to actually get the certificate once the output of the dry run is correct.
 
 # Misc
-Although, environment files are included in the .env folder for first time development use. Please do setup more secure database credentials.
-And, do delete the .env folder once the containers are running when in production!
+Although, secret files are included in the .secrets folder for first time development use. Please do setup more secure database credentials.
+And, do delete the .secrets folder once the containers are running when in production and/or encrypt them.
 
 Shell scripts are included for repetitive tasks.
 
