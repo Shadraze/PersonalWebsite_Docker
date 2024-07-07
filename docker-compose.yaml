@@ -5,6 +5,8 @@ services:
     # restart: always
     networks:
       - webserver
+    depends_on:
+      - wordpress
     ports:
       - 80:80    
       - 443:443
