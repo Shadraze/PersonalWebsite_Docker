@@ -1,4 +1,4 @@
-# Personal Website Container With Nginx, Wordpress and Certbot
+# Personal Website Project With Nginx, Wordpress and Certbot
 This project is intended to help people quickly quickly get a wordpress website up.
 It dockerizes a wordpress website with nginx for reverse proxy. A certbot container is also included to obtain ssl certs.
 This is a starting point for personal webservers, you can add your APIs on top with the reverse proxy.
