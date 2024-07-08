@@ -3,7 +3,7 @@ This project is intended to help people quickly quickly get a wordpress website 
 It dockerizes a wordpress website with nginx for reverse proxy. A certbot container is also included to obtain ssl certs.
 This is a starting point for personal webservers, you can add your APIs on top with the reverse proxy.
 
-Demo At: https://prabeshgiri.com.np
+WIP Demo At: https://prabeshgiri.com.np
 
 ## Project Setup
 Run the nginxConfLoad_Dev.sh script first to load an ssl-enabled development config for Nginx. Then: 
